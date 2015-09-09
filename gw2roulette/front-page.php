@@ -183,6 +183,7 @@ Current site version: <span class="siteVersion"></span>
 								<?php the_field('whats_next_heading'); ?>
 							</h2>
 					<p><?php the_field('whats_next_paragraph'); ?>
+					can't wait for these updates? help make them a reality: <a href="https://github.com/TheWebTech/GW2Roulette">check us out on GitHub.</a>
 						
 					</p>
 				</div>
