@@ -1,0 +1,12 @@
+var challenges = [
+	{"challengeName":"Yolo!",
+		"challengeDescriptions":"Start a new character and the first time you die(downed doesn't count) sell everything on that character. Delete that Character.",
+		"challengeIcons":"Woo.png"},
+	{"challengeName":"Self-made Man/Woman",
+		"challengeDescriptions":"You are only allowed to wear things you've crafted",
+		"challengeIcons":"Vaccumagic_Inhilation.png"},
+	{"challengeName":"Homeless",
+		"challengeDescriptions":"Put your current armor and weapon in your bank or in your inventory, you can only use gear given to you by others. Start begging. If it helps mention this site, and this challenge.",
+		"challengeIcons":"Ready.png"}
+	
+	];

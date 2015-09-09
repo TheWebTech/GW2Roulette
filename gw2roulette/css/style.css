@@ -1,0 +1,98 @@
+.well p,h3{
+	color: #000;
+}
+.in-well{
+	color:#000!important; /*this is a fix to the odd issue where styling of headings in wells is ignored due to jumbotron code. */
+}
+.in-well ul,li{
+	color:#000;
+}
+.in-well-h1{
+	font-size:36px!important;/*this is a fix to the odd issue where styling of headings in wells is ignored due to jumbotron code. */
+}
+
+body {
+	padding-top: 50px;
+	background-color:#000;
+ /* Whatever the height of your navbar is; the
+                             default is 50px */
+}
+.img-center{
+	 margin: 0 auto;/* this is to center responsive images on mobile */
+}
+h1,h2,h3,h4 {
+	font-family: Kotta One;
+}
+
+.navbar {
+	font-family: Kotta One;
+}
+/*
+.jumbotron p, h1 {
+	color: #000!important;
+}*/
+
+.funding {
+	margin-top: 15px;
+}
+
+.funding-well {
+	background-color: #92bb35;
+	border-color:#7ca02d;
+}
+
+.hoverspin:hover {
+	-webkit-animation: spin 2s infinite linear;
+	-moz-animation: spin 2s infinite linear;
+	-o-animation: spin 2s infinite linear;
+	animation: spin 2s infinite linear;
+}
+.headerjumbo{
+	  font-family: Kotta One;
+	background: url('../img/wyvvern.jpg') 50% 0 no-repeat fixed;
+	background-repeat:no-repeat;
+    background-size:cover;
+	height:600px;
+	margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	color:initial!important;
+	background-color: #CCCCCC!important;
+	
+}
+
+.jumbo-2{
+	background: url('../img/caithe.jpg') 50% 0 no-repeat fixed;
+	background-size:cover;
+	height:auto;
+}
+#roulettetable{
+	margin-top:100px;
+	margin-bottom:100px;
+}
+.jumbo-3{
+	background: url('../img/heartofthorns-ranger.jpg') 50% 0 no-repeat fixed;
+	background-size:cover;
+	height:auto;
+}
+
+.jumbo-mid{
+	margin-top:100px;
+}
+#versionNumber{
+	color:gray;
+	font-size:12px;
+	position:relative;
+	top:-8px;
+}
+
+.shadow-black{
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+	
+}
+
