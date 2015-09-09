@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title><?php bloginfo( 'name' ); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta name="author" content="">
+	<!-- 
+bootstrap styling config
+http://getbootstrap.com/customize/?id=93a13de9cbae4720a139
+
+-->
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	<link href='http://fonts.googleapis.com/css?family=Kotta+One|Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href="<?php echo get_bloginfo('template_directory');?>/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo get_bloginfo('template_directory');?>/style.css" rel="stylesheet">
+	<link href="<?php echo get_bloginfo('template_directory');?>/css/animate.css" rel="stylesheet">
+	<script src="<?php echo get_bloginfo('template_directory');?>/js/wow.min.js"></script>
+	
+
+	
+	<?php if ( is_front_page() ) {?>
+	<script>
+		new WOW().init();
+		$('.progress .progress-bar').progressbar();
+	</script>
+    <?php }
+ ?>
+	
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+	<!-- Fav and touch icons -->
+		<?php wp_head(); ?>
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_bloginfo('template_directory');?>/img/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_bloginfo('template_directory');?>/img/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_bloginfo('template_directory');?>/img/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="<?php echo get_bloginfo('template_directory');?>/img/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="<?php echo get_bloginfo('template_directory');?>img/favicon.png">
+
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/scripts.js"></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/lottery.js"></script>
+</head>
+
+<body <?php body_class(); ?>>
+	<!--Donation Modal -->
+	<div class="modal fade" id="Donate">
+  <div class="modal-dialog">
+    <div class="modal-content" id="donateform">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title in-well">Donate</h4>
+      </div>
+      <div class="modal-body" style="color:#000;">
+		  <div id="donatemodalcopy">
+        <p>Thank you for choosing to donate to the site!
+			The default paypal donation amount is $2. After donation I will add your name/character name to the website - if you want. If you wish to donate using another method please use the contact form.(which currently hasn't been implemented yet.) 
+		  
+		  
+		  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+		  Note: Donation uses paypal, you do not need a paypal account to donate.
+		  </p></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	<!--End of Donation Modal-->
+	
+	
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+						</button> <a class="navbar-brand" href="#"><?php bloginfo( 'name' ); ?> <br><span id="versionNumber" class="siteVersion"></span></a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<!--<li class="active">
+								<a href="#">Link</a>
+							</li>-->
+							<li>
+								<a href="#spin">Spin</a>
+							</li>
+							<li>
+								<a href="#funding">Funding</a>
+							</li>
+							<!--
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret" ></strong></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Action</a>
+									</li>
+									<li>
+										<a href="#">Another action</a>
+									</li>
+									<li>
+										<a href="#">Something else here</a>
+									</li>
+									<li class="divider">
+									</li>
+									<li>
+										<a href="#">Separated link</a>
+									</li>
+									<li class="divider">
+									</li>
+									<li>
+										<a href="#">One more separated link</a>
+									</li>
+								</ul>
+							</li>-->
+						</ul>
+						<!--<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						</form>-->
+						<ul class="nav navbar-nav navbar-right">
+							<!--<li>
+								<a href="#">Link</a>
+							</li>-->
+							<!--
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret" ></strong></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">Action</a>
+									</li>
+									<li>
+										<a href="#">Another action</a>
+									</li>
+									<li>
+										<a href="#">Something else here</a>
+									</li>
+									<li class="divider">
+									</li>
+									<li>
+										<a href="#">Separated link</a>
+									</li>
+								</ul>
+							</li>
+-->
+						</ul>
+					</div>
+
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!--end of header.php -->
